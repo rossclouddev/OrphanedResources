@@ -156,7 +156,7 @@
           {
             "type": 1,
             "content": {
-              "json": "### Azure Orphaned Resources Workbook\r\n\r\nThe purpose of this workbook is to provide an overview of your orphaned resources, enabling you to enhance efficiency by:\r\n\r\n- Saving money\r\n- Prevent misconfiguration\r\n- Simplify operations\r\n\r\n<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"19px\" height=\"19px\" viewBox=\"0 0 19 18\" version=\"1.1\"><g id=\"surface1\"><path style=\" stroke:none;fill-rule:evenodd;fill:rgb(14.117647%,16.078431%,18.431373%);fill-opacity:1;\" d=\"M 9.472656 0 C 4.234375 0 0 4.125 0 9.226562 C 0 13.308594 2.714844 16.761719 6.476562 17.984375 C 6.945312 18.074219 7.121094 17.785156 7.121094 17.539062 C 7.121094 17.324219 7.105469 16.59375 7.105469 15.828125 C 4.46875 16.378906 3.921875 14.726562 3.921875 14.726562 C 3.496094 13.660156 2.871094 13.382812 2.871094 13.382812 C 2.007812 12.820312 2.933594 12.820312 2.933594 12.820312 C 3.890625 12.878906 4.390625 13.765625 4.390625 13.765625 C 5.238281 15.171875 6.601562 14.773438 7.152344 14.53125 C 7.230469 13.933594 7.480469 13.519531 7.746094 13.292969 C 5.644531 13.078125 3.433594 12.285156 3.433594 8.738281 C 3.433594 7.730469 3.808594 6.90625 4.40625 6.265625 C 4.3125 6.035156 3.984375 5.085938 4.5 3.820312 C 4.5 3.820312 5.300781 3.574219 7.105469 4.765625 C 7.875 4.566406 8.671875 4.460938 9.472656 4.460938 C 10.269531 4.460938 11.085938 4.566406 11.839844 4.765625 C 13.644531 3.574219 14.441406 3.820312 14.441406 3.820312 C 14.960938 5.085938 14.628906 6.035156 14.535156 6.265625 C 15.148438 6.90625 15.507812 7.730469 15.507812 8.738281 C 15.507812 12.285156 13.296875 13.0625 11.179688 13.292969 C 11.527344 13.582031 11.824219 14.132812 11.824219 15.003906 C 11.824219 16.242188 11.808594 17.234375 11.808594 17.539062 C 11.808594 17.785156 11.980469 18.074219 12.453125 17.984375 C 16.214844 16.761719 18.925781 13.308594 18.925781 9.226562 C 18.941406 4.125 14.695312 0 9.472656 0 Z M 9.472656 0 \"/></g></svg>\r\n&nbsp;[<span style=\"font-family: Open Sans; font-weight: 620; font-size: 14px;margin:-10px 0px 0px 0px;position: relative;top:-3px;left:-4px;\">Please submit any issues </span>](https://github.com/dolevshor/azure-orphan-resources/issues) <span style=\"font-family: Open Sans; font-weight: 620; font-size: 14px;margin:-10px 0px 0px 0px;position: relative;top:-3px;left:-4px;\"> with the workbook template to GitHub.</span>",
+              "json": "### Azure Orphaned Resources Workbook\r\n\r\nNote: Modified by RT 11/6/25 to include VNets with no connected devices and VNGs with no 'connected' connections.\r\n\r\nThe purpose of this workbook is to provide an overview of your orphaned resources, enabling you to enhance efficiency by:\r\n\r\n- Saving money\r\n- Prevent misconfiguration\r\n- Simplify operations\r\n\r\n<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"19px\" height=\"19px\" viewBox=\"0 0 19 18\" version=\"1.1\"><g id=\"surface1\"><path style=\" stroke:none;fill-rule:evenodd;fill:rgb(14.117647%,16.078431%,18.431373%);fill-opacity:1;\" d=\"M 9.472656 0 C 4.234375 0 0 4.125 0 9.226562 C 0 13.308594 2.714844 16.761719 6.476562 17.984375 C 6.945312 18.074219 7.121094 17.785156 7.121094 17.539062 C 7.121094 17.324219 7.105469 16.59375 7.105469 15.828125 C 4.46875 16.378906 3.921875 14.726562 3.921875 14.726562 C 3.496094 13.660156 2.871094 13.382812 2.871094 13.382812 C 2.007812 12.820312 2.933594 12.820312 2.933594 12.820312 C 3.890625 12.878906 4.390625 13.765625 4.390625 13.765625 C 5.238281 15.171875 6.601562 14.773438 7.152344 14.53125 C 7.230469 13.933594 7.480469 13.519531 7.746094 13.292969 C 5.644531 13.078125 3.433594 12.285156 3.433594 8.738281 C 3.433594 7.730469 3.808594 6.90625 4.40625 6.265625 C 4.3125 6.035156 3.984375 5.085938 4.5 3.820312 C 4.5 3.820312 5.300781 3.574219 7.105469 4.765625 C 7.875 4.566406 8.671875 4.460938 9.472656 4.460938 C 10.269531 4.460938 11.085938 4.566406 11.839844 4.765625 C 13.644531 3.574219 14.441406 3.820312 14.441406 3.820312 C 14.960938 5.085938 14.628906 6.035156 14.535156 6.265625 C 15.148438 6.90625 15.507812 7.730469 15.507812 8.738281 C 15.507812 12.285156 13.296875 13.0625 11.179688 13.292969 C 11.527344 13.582031 11.824219 14.132812 11.824219 15.003906 C 11.824219 16.242188 11.808594 17.234375 11.808594 17.539062 C 11.808594 17.785156 11.980469 18.074219 12.453125 17.984375 C 16.214844 16.761719 18.925781 13.308594 18.925781 9.226562 C 18.941406 4.125 14.695312 0 9.472656 0 Z M 9.472656 0 \"/></g></svg>\r\n&nbsp;[<span style=\"font-family: Open Sans; font-weight: 620; font-size: 14px;margin:-10px 0px 0px 0px;position: relative;top:-3px;left:-4px;\">Please submit any issues </span>](https://github.com/dolevshor/azure-orphan-resources/issues) <span style=\"font-family: Open Sans; font-weight: 620; font-size: 14px;margin:-10px 0px 0px 0px;position: relative;top:-3px;left:-4px;\"> with the workbook template to GitHub.</span>",
               "style": "upsell"
             },
             "conditionalVisibility": {
@@ -186,6 +186,74 @@
               "version": "NotebookGroup/1.0",
               "groupType": "editable",
               "items": [
+                {
+                  "type": 3,
+                  "content": {
+                    "version": "KqlItem/1.0",
+                    "query": "resources\r\n| where type == \"microsoft.network/virtualnetworkgateways\"\r\n| where resourceGroup in~ ({ResourceGroup:value})\r\n| extend gatewayType = tostring(properties.gatewayType)\r\n| where tolower(gatewayType) != \"expressroute\" and isnotempty(gatewayType)\r\n| extend vnetGatewayId = id \r\n| extend subscriptionId = tostring(subscriptionId) \r\n| join kind=leftouter (\r\n    resources \r\n    | where type == \"microsoft.network/connections\" \r\n    | mv-expand gatewayRefRaw = pack_array(tostring(properties.virtualNetworkGateway1.id), tostring(properties.virtualNetworkGateway2.id)) \r\n    | extend vnetGatewayRef = tostring(gatewayRefRaw) \r\n    | extend connectionStatus = tostring(properties.connectionStatus) \r\n    | where tolower(connectionStatus) == \"connected\" \r\n    | summarize connectedConnectionCount = count() by vnetGatewayRef\r\n) on $left.vnetGatewayId == $right.vnetGatewayRef \r\n| extend connectedConnectionCount = iif(isnull(connectedConnectionCount), 0, connectedConnectionCount) \r\n| extend isUsed = iif(connectedConnectionCount > 0, \"Yes\", \"No\") \r\n| where isUsed == \"No\" \r\n| summarize total_count = count() by type\r\n",
+                    "size": 3,
+                    "title": "💲",
+                    "queryType": 1,
+                    "resourceType": "microsoft.resourcegraph/resources",
+                    "crossComponentResources": [
+                      "{Subscription}"
+                    ],
+                    "visualization": "tiles",
+                    "tileSettings": {
+                      "titleContent": {
+                        "columnMatch": "type",
+                        "formatter": 16,
+                        "formatOptions": {
+                          "showIcon": true
+                        }
+                      },
+                      "leftContent": {
+                        "columnMatch": "total_count",
+                        "formatter": 12,
+                        "formatOptions": {
+                          "palette": "auto"
+                        }
+                      },
+                      "showBorder": true
+                    }
+                  },
+                  "customWidth": "16.5",
+                  "name": "query - Overview - Virtual Network Gateways Count"
+                },
+                {
+                  "type": 3,
+                  "content": {
+                    "version": "KqlItem/1.0",
+                    "query": "resources\r\n| where type =~ \"microsoft.network/privatednszones\"\r\n| where resourceGroup in~ ({ResourceGroup:value})\r\n| where properties.numberOfVirtualNetworkLinks == 0\r\n| summarize count_ = count() by type\r\n| extend count_ = iff(count_ == 0, 0, count_)\r\n| union (datatable(type:string, count_:long) [\"microsoft.network/privatednszones\", 0])\r\n| summarize total_count = max(count_) by type",
+                    "size": 3,
+                    "title": "💲",
+                    "queryType": 1,
+                    "resourceType": "microsoft.resourcegraph/resources",
+                    "crossComponentResources": [
+                      "{Subscription}"
+                    ],
+                    "visualization": "tiles",
+                    "tileSettings": {
+                      "titleContent": {
+                        "columnMatch": "type",
+                        "formatter": 16,
+                        "formatOptions": {
+                          "showIcon": true
+                        }
+                      },
+                      "leftContent": {
+                        "columnMatch": "total_count",
+                        "formatter": 12,
+                        "formatOptions": {
+                          "palette": "auto"
+                        }
+                      },
+                      "showBorder": true
+                    }
+                  },
+                  "customWidth": "16.5",
+                  "name": "query - Overview - Private DNS zones Count"
+                },
                 {
                   "type": 3,
                   "content": {
@@ -598,7 +666,7 @@
                   "type": 3,
                   "content": {
                     "version": "KqlItem/1.0",
-                    "query": "resources\r\n| where type =~ \"microsoft.network/virtualnetworks\"\r\n| where resourceGroup in~ ({ResourceGroup:value})\r\n| where properties.subnets == \"[]\"\r\n| summarize count_ = count() by type\r\n| extend count_ = iff(count_ == 0, 0, count_)\r\n| union (datatable(type:string, count_:long) [\"microsoft.network/virtualnetworks\", 0])\r\n| summarize total_count = max(count_) by type",
+                    "query": "resources\n| where type == \"microsoft.network/virtualnetworks\"\n| where resourceGroup in~ ({ResourceGroup:value})\n| extend vnetAddressPrefixes = properties.addressSpace.addressPrefixes,\n         vnetResourceId = id\n| mv-expand subnet = properties.subnets\n| extend subnetName = tostring(subnet.name),\n         subnetAddressPrefix = tostring(subnet.properties.addressPrefix),\n         ipConfigurations = subnet.properties.ipConfigurations,\n         delegations = subnet.properties.delegations\n| where isnull(delegations) or array_length(delegations) == 0\n| extend connectedDevicesCount = iff(isnotempty(ipConfigurations), array_length(ipConfigurations), 0)\n| summarize \n    connectedDevicesTotal = sum(connectedDevicesCount),\n    isEmptyVnet = sum(connectedDevicesCount) == 0\n  by vnetResourceId, type\n| where isEmptyVnet\n| summarize total_count = count() by type\n",
                     "size": 3,
                     "title": " ",
                     "queryType": 1,
@@ -734,40 +802,6 @@
                   "type": 3,
                   "content": {
                     "version": "KqlItem/1.0",
-                    "query": "resources\r\n| where type =~ \"microsoft.network/privatednszones\"\r\n| where resourceGroup in~ ({ResourceGroup:value})\r\n| where properties.numberOfVirtualNetworkLinks == 0\r\n| summarize count_ = count() by type\r\n| extend count_ = iff(count_ == 0, 0, count_)\r\n| union (datatable(type:string, count_:long) [\"microsoft.network/privatednszones\", 0])\r\n| summarize total_count = max(count_) by type",
-                    "size": 3,
-                    "title": "💲",
-                    "queryType": 1,
-                    "resourceType": "microsoft.resourcegraph/resources",
-                    "crossComponentResources": [
-                      "{Subscription}"
-                    ],
-                    "visualization": "tiles",
-                    "tileSettings": {
-                      "titleContent": {
-                        "columnMatch": "type",
-                        "formatter": 16,
-                        "formatOptions": {
-                          "showIcon": true
-                        }
-                      },
-                      "leftContent": {
-                        "columnMatch": "total_count",
-                        "formatter": 12,
-                        "formatOptions": {
-                          "palette": "auto"
-                        }
-                      },
-                      "showBorder": true
-                    }
-                  },
-                  "customWidth": "16.5",
-                  "name": "query - Overview - Private DNS zones Count"
-                },
-                {
-                  "type": 3,
-                  "content": {
-                    "version": "KqlItem/1.0",
                     "query": "resources\r\n| where type =~ \"microsoft.network/privateendpoints\"\r\n| where resourceGroup in~ ({ResourceGroup:value})\r\n| extend connection = iff(array_length(properties.manualPrivateLinkServiceConnections) > 0, properties.manualPrivateLinkServiceConnections[0], properties.privateLinkServiceConnections[0])\r\n| extend stateEnum = tostring(connection.properties.privateLinkServiceConnectionState.status)\r\n| where stateEnum == \"Disconnected\"\r\n| summarize count_ = count() by type\r\n| extend count_ = iff(count_ == 0, 0, count_)\r\n| union (datatable(type:string, count_:long) [\"microsoft.network/privateendpoints\", 0])\r\n| summarize total_count = max(count_) by type",
                     "size": 3,
                     "title": "💲",
@@ -797,40 +831,6 @@
                   },
                   "customWidth": "16.5",
                   "name": "query - Overview - Private Endpoints Count"
-                },
-                {
-                  "type": 3,
-                  "content": {
-                    "version": "KqlItem/1.0",
-                    "query": "resources\r\n| where type =~ \"microsoft.network/virtualnetworkgateways\"\r\n| where resourceGroup in~ ({ResourceGroup:value})\r\n| extend vpnClientConfiguration = properties.vpnClientConfiguration\r\n| extend Resource = id\r\n| join kind=leftouter (\r\n    resources\r\n    | where type =~ \"microsoft.network/connections\"\r\n    | mv-expand Resource = pack_array(properties.virtualNetworkGateway1.id, properties.virtualNetworkGateway2.id) to typeof(string)\r\n    | project Resource, connectionId = id, ConnectionProperties=properties\r\n    ) on Resource                  \r\n| where isempty(vpnClientConfiguration) and isempty(connectionId)\r\n| summarize count_ = count() by type\r\n| extend count_ = iff(count_ == 0, 0, count_)\r\n| union (datatable(type:string, count_:long) [\"microsoft.network/virtualnetworkgateways\", 0])\r\n| summarize total_count = max(count_) by type",
-                    "size": 3,
-                    "title": "💲",
-                    "queryType": 1,
-                    "resourceType": "microsoft.resourcegraph/resources",
-                    "crossComponentResources": [
-                      "{Subscription}"
-                    ],
-                    "visualization": "tiles",
-                    "tileSettings": {
-                      "titleContent": {
-                        "columnMatch": "type",
-                        "formatter": 16,
-                        "formatOptions": {
-                          "showIcon": true
-                        }
-                      },
-                      "leftContent": {
-                        "columnMatch": "total_count",
-                        "formatter": 12,
-                        "formatOptions": {
-                          "palette": "auto"
-                        }
-                      },
-                      "showBorder": true
-                    }
-                  },
-                  "customWidth": "16.5",
-                  "name": "query - Overview - Virtual Network Gateways Count"
                 },
                 {
                   "type": 3,
@@ -2281,6 +2281,14 @@
               "style": "tabs",
               "links": [
                 {
+                  "id": "2b5c6c87-9f7e-4afa-894e-e2e0804dd473",
+                  "cellValue": "networkingTab",
+                  "linkTarget": "parameter",
+                  "linkLabel": "Virtual Network Gateways 💲",
+                  "subTarget": "vngs",
+                  "style": "link"
+                },
+                {
                   "id": "75dbecf0-d939-484a-a9b6-7ac357384d56",
                   "cellValue": "networkingTab",
                   "linkTarget": "parameter",
@@ -2383,14 +2391,6 @@
                   "linkTarget": "parameter",
                   "linkLabel": "Private Endpoints 💲",
                   "subTarget": "privateendpoints",
-                  "style": "link"
-                },
-                {
-                  "id": "2b5c6c87-9f7e-4afa-894e-e2e0804dd473",
-                  "cellValue": "networkingTab",
-                  "linkTarget": "parameter",
-                  "linkLabel": "Virtual Network Gateways 💲",
-                  "subTarget": "vngs",
                   "style": "link"
                 },
                 {
@@ -4522,7 +4522,7 @@
                       {
                         "type": 1,
                         "content": {
-                          "json": "[Virtual Networks](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) (VNETs) without subnets.",
+                          "json": "[Virtual Networks](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) (VNETs) with no devices connected to any subnet.",
                           "style": "upsell"
                         },
                         "name": "text - Title - Info"
@@ -4531,7 +4531,7 @@
                         "type": 3,
                         "content": {
                           "version": "KqlItem/1.0",
-                          "query": "resources\r\n| where type =~ \"microsoft.network/virtualnetworks\"\r\n| where resourceGroup in~ ({ResourceGroup:value})\r\n| where properties.subnets == \"[]\"\r\n| summarize count_ = count() by type\r\n| extend count_ = iff(count_ == 0, 0, count_)\r\n| union (datatable(type:string, count_:long) [\"microsoft.network/virtualnetworks\", 0])\r\n| summarize total_count = max(count_) by type",
+                          "query": "resources\n| where type == \"microsoft.network/virtualnetworks\"\n| where resourceGroup in~ ({ResourceGroup:value})\n| extend vnetAddressPrefixes = properties.addressSpace.addressPrefixes,\n         vnetResourceId = id\n| mv-expand subnet = properties.subnets\n| extend subnetName = tostring(subnet.name),\n         subnetAddressPrefix = tostring(subnet.properties.addressPrefix),\n         ipConfigurations = subnet.properties.ipConfigurations,\n         delegations = subnet.properties.delegations\n| where isnull(delegations) or array_length(delegations) == 0\n| extend connectedDevicesCount = iff(isnotempty(ipConfigurations), array_length(ipConfigurations), 0)\n| summarize \n    connectedDevicesTotal = sum(connectedDevicesCount),\n    isEmptyVnet = sum(connectedDevicesCount) == 0\n  by vnetResourceId, type\n| where isEmptyVnet\n| summarize total_count = count() by type\n",
                           "size": 4,
                           "title": "Total",
                           "queryType": 1,
@@ -4566,7 +4566,7 @@
                         "type": 3,
                         "content": {
                           "version": "KqlItem/1.0",
-                          "query": "resources\r\n| where type =~ \"microsoft.network/virtualnetworks\"\r\n| where resourceGroup in~ ({ResourceGroup:value})\r\n| where properties.subnets == \"[]\"\r\n| summarize count(type) by location",
+                          "query": "resources\n| where type == \"microsoft.network/virtualnetworks\"\n| where resourceGroup in~ ({ResourceGroup:value})\n| extend vnetAddressPrefixes = properties.addressSpace.addressPrefixes,\n         vnetResourceId = id,\n         location = location\n| mv-expand subnet = properties.subnets\n| extend subnetName = tostring(subnet.name),\n         subnetAddressPrefix = tostring(subnet.properties.addressPrefix),\n         ipConfigurations = subnet.properties.ipConfigurations,\n         delegations = subnet.properties.delegations\n| where isnull(delegations) or array_length(delegations) == 0\n| extend connectedDevicesCount = iff(isnotempty(ipConfigurations), array_length(ipConfigurations), 0)\n| summarize \n    connectedDevicesTotal = sum(connectedDevicesCount),\n    isEmptyVnet = sum(connectedDevicesCount) == 0\n  by vnetResourceId, type, location\n| where isEmptyVnet\n| summarize total_count = count() by location\n",
                           "size": 4,
                           "title": "Count by Location",
                           "queryType": 1,
@@ -4587,7 +4587,7 @@
                         "type": 3,
                         "content": {
                           "version": "KqlItem/1.0",
-                          "query": "resources\r\n| where type =~ \"microsoft.network/virtualnetworks\"\r\n| where resourceGroup in~ ({ResourceGroup:value})\r\n| where properties.subnets == \"[]\"\r\n| extend Details = pack_all()\r\n| project subscriptionId, Resource=id, resourceGroup, location, tags, Details",
+                          "query": "resourcecontainers\n| where type == \"microsoft.resources/subscriptions\"\n| where resourceGroup in~ ({ResourceGroup:value})\n| project subscriptionId, subscriptionName = name\n| join kind=rightouter (\n    resources\n    | where type == \"microsoft.network/virtualnetworks\"\n    | extend vnetAddressPrefixes = properties.addressSpace.addressPrefixes,\n             vnetResourceId = id,\n             location = location,\n             tags = tags,\n             Details = pack_all()\n    | mv-expand subnet = properties.subnets\n    | extend subnetName = tostring(subnet.name),\n             subnetAddressPrefix = tostring(subnet.properties.addressPrefix),\n             ipConfigurations = subnet.properties.ipConfigurations,\n             delegations = subnet.properties.delegations\n    | extend hasSubnetDelegations = iff(isnotnull(delegations) and array_length(delegations) > 0, true, false)\n    | where hasSubnetDelegations == false\n    | extend connectedDevicesCount = iff(isnotempty(ipConfigurations), array_length(ipConfigurations), 0)\n    | summarize \n        firstVnetPrefixes = any(vnetAddressPrefixes),\n        connectedDevicesTotal = sum(connectedDevicesCount),\n        hasDelegations = max(toint(hasSubnetDelegations)) > 0,\n        isEmptyVnet = sum(connectedDevicesCount) == 0,\n        vnetResourceId = any(vnetResourceId),\n        location = any(location),\n        tags = any(tags),\n        Details = any(Details)\n      by subscriptionId, resourceGroup, vnetName = name\n    | extend vnetAddressPrefixes = strcat_array(firstVnetPrefixes, \", \")\n    | where isEmptyVnet == true\n    | project-away firstVnetPrefixes\n) on subscriptionId\n| project subscriptionId, Resource = vnetResourceId, resourceGroup, location, tags, Details\n",
                           "size": 3,
                           "title": "Orphaned Virtual Networks",
                           "noDataMessage": "No orphaned Virtual Networks found.",
@@ -4636,6 +4636,10 @@
                                   "linkLabel": "🔍 View Details",
                                   "linkIsContextBlade": true
                                 }
+                              },
+                              {
+                                "columnMatch": "subscriptionName",
+                                "formatter": 5
                               }
                             ],
                             "rowLimit": 1000,
@@ -6211,7 +6215,7 @@
                 {
                   "type": 1,
                   "content": {
-                    "json": "[Virtual Network Gateways](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways) without Point-to-site configuration or Connections.",
+                    "json": "[Virtual Network Gateways](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways) without Point-to-site configuration or Connections. IGNORE ExpressRoute entries, these are not correctly detected as orphaned.",
                     "style": "upsell"
                   },
                   "name": "text - Title - Info - Virtual Network Gateways"
@@ -6220,7 +6224,7 @@
                   "type": 3,
                   "content": {
                     "version": "KqlItem/1.0",
-                    "query": "resources\r\n| where type =~ \"microsoft.network/virtualnetworkgateways\"\r\n| where resourceGroup in~ ({ResourceGroup:value})\r\n| extend vpnClientConfiguration = properties.vpnClientConfiguration\r\n| extend Resource = id\r\n| join kind=leftouter (\r\n    resources\r\n    | where type =~ \"microsoft.network/connections\"\r\n    | mv-expand Resource = pack_array(properties.virtualNetworkGateway1.id, properties.virtualNetworkGateway2.id) to typeof(string)\r\n    | project Resource, connectionId = id, ConnectionProperties=properties\r\n    ) on Resource                  \r\n| where isempty(vpnClientConfiguration) and isempty(connectionId)\r\n| summarize count_ = count() by type\r\n| extend count_ = iff(count_ == 0, 0, count_)\r\n| union (datatable(type:string, count_:long) [\"microsoft.network/virtualnetworkgateways\", 0])\r\n| summarize total_count = max(count_) by type",
+                    "query": "resources | where type == \"microsoft.network/virtualnetworkgateways\" \r\n| where resourceGroup in~ ({ResourceGroup:value})\r\n//| where tostring(properties.gatewayType) != \"ExpressRoute\" \r\n| extend gatewayType = tostring(properties.gatewayType)\r\n| where tolower(gatewayType) != \"expressroute\" and isnotempty(gatewayType)\r\n| extend vnetGatewayId = id | extend subscriptionId = tostring(subscriptionId) \r\n| join kind=leftouter (resources | where type == \"microsoft.network/connections\" \r\n| mv-expand gatewayRefRaw = pack_array(tostring(properties.virtualNetworkGateway1.id), tostring(properties.virtualNetworkGateway2.id)) \r\n| extend vnetGatewayRef = tostring(gatewayRefRaw) \r\n| extend connectionStatus = tostring(properties.connectionStatus) \r\n| where connectionStatus =~ \"Connected\" \r\n| summarize connectedConnectionCount = count() by vnetGatewayRef) on $left.vnetGatewayId == $right.vnetGatewayRef \r\n| extend connectedConnectionCount = iif(isnull(connectedConnectionCount), 0, connectedConnectionCount) \r\n| extend isUsed = iif(connectedConnectionCount > 0, \"Yes\", \"No\") \r\n| where isUsed == \"No\" \r\n| summarize total_count = count() by type",
                     "size": 4,
                     "title": "Total",
                     "queryType": 1,
@@ -6255,7 +6259,7 @@
                   "type": 3,
                   "content": {
                     "version": "KqlItem/1.0",
-                    "query": "resources\r\n| where type =~ \"microsoft.network/virtualnetworkgateways\"\r\n| where resourceGroup in~ ({ResourceGroup:value})\r\n| extend vpnClientConfiguration = properties.vpnClientConfiguration\r\n| extend Resource = id\r\n| join kind=leftouter (\r\n    resources\r\n    | where type =~ \"microsoft.network/connections\"\r\n    | mv-expand Resource = pack_array(properties.virtualNetworkGateway1.id, properties.virtualNetworkGateway2.id) to typeof(string)\r\n    | project Resource, connectionId = id, ConnectionProperties=properties\r\n    ) on Resource                  \r\n| where isempty(vpnClientConfiguration) and isempty(connectionId)\r\n| summarize count(type) by location",
+                    "query": "resources | where type == \"microsoft.network/virtualnetworkgateways\"\r\n| where resourceGroup in~ ({ResourceGroup:value})\r\n| extend gatewayType = tostring(properties.gatewayType)\r\n| where tolower(gatewayType) != \"expressroute\" and isnotempty(gatewayType)\r\n| extend vnetGatewayId = id \r\n| extend subscriptionId = tostring(subscriptionId) \r\n| extend location = tostring(location) \r\n| join kind=leftouter (resources \r\n| where type == \"microsoft.network/connections\" \r\n| mv-expand gatewayRefRaw = pack_array(tostring(properties.virtualNetworkGateway1.id), tostring(properties.virtualNetworkGateway2.id)) \r\n| extend vnetGatewayRef = tostring(gatewayRefRaw) \r\n| extend connectionStatus = tostring(properties.connectionStatus) \r\n| where connectionStatus =~ \"Connected\" \r\n| summarize connectedConnectionCount = count() by vnetGatewayRef) on $left.vnetGatewayId == $right.vnetGatewayRef \r\n| extend connectedConnectionCount = iif(isnull(connectedConnectionCount), 0, connectedConnectionCount) \r\n| extend isUsed = iif(connectedConnectionCount > 0, \"Yes\", \"No\") \r\n| where isUsed == \"No\" | summarize total_count = count() by location",
                     "size": 4,
                     "title": "Count by Location",
                     "queryType": 1,
@@ -6276,7 +6280,7 @@
                   "type": 3,
                   "content": {
                     "version": "KqlItem/1.0",
-                    "query": "resources\r\n| where type =~ \"microsoft.network/virtualnetworkgateways\"\r\n| where resourceGroup in~ ({ResourceGroup:value})\r\n| extend GatewayType = tostring(properties.gatewayType)\r\n| extend vpnClientConfiguration = properties.vpnClientConfiguration\r\n| extend Resource = id\r\n| join kind=leftouter (\r\n    resources\r\n    | where type =~ \"microsoft.network/connections\"\r\n    | mv-expand Resource = pack_array(properties.virtualNetworkGateway1.id, properties.virtualNetworkGateway2.id) to typeof(string)\r\n    | project Resource, connectionId = id, ConnectionProperties=properties\r\n    ) on Resource                  \r\n| where isempty(vpnClientConfiguration) and isempty(connectionId)\r\n| summarize count(type) by GatewayType",
+                    "query": "resources\n| where type =~ \"microsoft.network/virtualnetworkgateways\"\n| where resourceGroup in~ ({ResourceGroup:value})\n| extend GatewayType = tostring(properties.gatewayType)\n| extend vpnClientConfiguration = tostring(properties.vpnClientConfiguration)\n| extend vngId = id\n| join kind=leftouter (\n    resources\n    | where type =~ \"microsoft.network/connections\"\n    | mv-expand connectionRef = pack_array(\n        tostring(properties.virtualNetworkGateway1.id),\n        tostring(properties.virtualNetworkGateway2.id)\n    ) to typeof(string)\n    | project vngConnectionId = connectionRef, connectionStatus = tostring(properties.connectionStatus)\n) on $left.vngId == $right.vngConnectionId\n| summarize connectionStatuses = make_list(connectionStatus) by vngId, GatewayType, vpnClientConfiguration\n| extend hasConnected = array_index_of(connectionStatuses, \"Connected\") >= 0\n| where isempty(vpnClientConfiguration) and hasConnected == false\n| summarize total_count = count() by GatewayType",
                     "size": 4,
                     "title": "Count by Gateway Type",
                     "queryType": 1,
@@ -6297,7 +6301,7 @@
                   "type": 3,
                   "content": {
                     "version": "KqlItem/1.0",
-                    "query": "resources\r\n| where type =~ \"microsoft.network/virtualnetworkgateways\"\r\n| where resourceGroup in~ ({ResourceGroup:value})\r\n| extend SKU = tostring(properties.sku.name)\r\n| extend vpnClientConfiguration = properties.vpnClientConfiguration\r\n| extend Resource = id\r\n| join kind=leftouter (\r\n    resources\r\n    | where type =~ \"microsoft.network/connections\"\r\n    | mv-expand Resource = pack_array(properties.virtualNetworkGateway1.id, properties.virtualNetworkGateway2.id) to typeof(string)\r\n    | project Resource, connectionId = id, ConnectionProperties=properties\r\n    ) on Resource                  \r\n| where isempty(vpnClientConfiguration) and isempty(connectionId)\r\n| summarize count(type) by SKU",
+                    "query": "resources\n| where type =~ \"microsoft.network/virtualnetworkgateways\"\n| extend SKU = tostring(properties.sku.name)\n| extend vpnClientConfiguration = tostring(properties.vpnClientConfiguration)\n| extend vngId = id\n| join kind=leftouter (\n    resources\n    | where type =~ \"microsoft.network/connections\"\n    | mv-expand connectionRef = pack_array(\n        tostring(properties.virtualNetworkGateway1.id),\n        tostring(properties.virtualNetworkGateway2.id)\n    ) to typeof(string)\n    | project vngConnectionId = connectionRef, connectionStatus = tostring(properties.connectionStatus)\n) on $left.vngId == $right.vngConnectionId\n| summarize connectionStatuses = make_list(connectionStatus) by vngId, SKU, vpnClientConfiguration\n| extend hasConnected = array_index_of(connectionStatuses, \"Connected\") >= 0\n| where isempty(vpnClientConfiguration) and hasConnected == false\n| summarize total_count = count() by SKU",
                     "size": 4,
                     "title": "Count by Sku",
                     "queryType": 1,
@@ -6318,7 +6322,7 @@
                   "type": 3,
                   "content": {
                     "version": "KqlItem/1.0",
-                    "query": "resources\r\n| where type =~ \"microsoft.network/virtualnetworkgateways\"\r\n| where resourceGroup in~ ({ResourceGroup:value})\r\n| extend Tier = tostring(properties.sku.tier)\r\n| extend vpnClientConfiguration = properties.vpnClientConfiguration\r\n| extend Resource = id\r\n| join kind=leftouter (\r\n    resources\r\n    | where type =~ \"microsoft.network/connections\"\r\n    | mv-expand Resource = pack_array(properties.virtualNetworkGateway1.id, properties.virtualNetworkGateway2.id) to typeof(string)\r\n    | project Resource, connectionId = id, ConnectionProperties=properties\r\n    ) on Resource                  \r\n| where isempty(vpnClientConfiguration) and isempty(connectionId)\r\n| summarize count(type) by Tier",
+                    "query": "resources\n| where type =~ \"microsoft.network/virtualnetworkgateways\"\n| extend Tier = tostring(properties.sku.tier)\n| extend vpnClientConfiguration = tostring(properties.vpnClientConfiguration)\n| extend vngId = id\n| join kind=leftouter (\n    resources\n    | where type =~ \"microsoft.network/connections\"\n    | mv-expand connectionRef = pack_array(\n        tostring(properties.virtualNetworkGateway1.id),\n        tostring(properties.virtualNetworkGateway2.id)\n    ) to typeof(string)\n    | project vngConnectionId = connectionRef, connectionStatus = tostring(properties.connectionStatus)\n) on $left.vngId == $right.vngConnectionId\n| summarize connectionStatuses = make_list(connectionStatus) by vngId, Tier, vpnClientConfiguration\n| extend hasConnected = array_index_of(connectionStatuses, \"Connected\") >= 0\n| where isempty(vpnClientConfiguration) and hasConnected == false\n| summarize total_count = count() by Tier",
                     "size": 4,
                     "title": "Count by Tier",
                     "queryType": 1,
@@ -6339,7 +6343,7 @@
                   "type": 3,
                   "content": {
                     "version": "KqlItem/1.0",
-                    "query": "resources\r\n| where type =~ \"microsoft.network/virtualnetworkgateways\"\r\n| where resourceGroup in~ ({ResourceGroup:value})\r\n| extend Details = pack_all()\r\n| extend SKU = tostring(properties.sku.name)\r\n| extend Tier = tostring(properties.sku.tier)\r\n| extend GatewayType = tostring(properties.gatewayType)\r\n| extend vpnClientConfiguration = properties.vpnClientConfiguration\r\n| extend Resource = id\r\n| join kind=leftouter (\r\n    resources\r\n    | where type =~ \"microsoft.network/connections\"\r\n    | mv-expand Resource = pack_array(properties.virtualNetworkGateway1.id, properties.virtualNetworkGateway2.id) to typeof(string)\r\n    | project Resource, connectionId = id, ConnectionProperties=properties\r\n    ) on Resource                  \r\n| where isempty(vpnClientConfiguration) and isempty(connectionId)\r\n| project subscriptionId, Resource, resourceGroup, location, GatewayType, SKU, Tier, tags, Details",
+                    "query": "resources\n| where type =~ \"microsoft.network/virtualnetworkgateways\"\n| extend SKU = tostring(properties.sku.name)\n| extend Tier = tostring(properties.sku.tier)\n| extend GatewayType = tostring(properties.gatewayType)\n| extend vpnClientConfiguration = tostring(properties.vpnClientConfiguration)\n| extend Resource = id\n| extend subscriptionId = tostring(subscriptionId)\n| extend resourceGroup = tostring(split(id, \"/\")[4])\n| extend location = tostring(location)\n| join kind=leftouter (\n    resources\n    | where type =~ \"microsoft.network/connections\"\n    | mv-expand Resource = pack_array(\n        tostring(properties.virtualNetworkGateway1.id),\n        tostring(properties.virtualNetworkGateway2.id)\n    ) to typeof(string)\n    | extend connectionStatus = tostring(properties.connectionStatus)\n    | project Resource, connectionId = id, connectionStatus\n) on Resource\n| summarize connected = countif(connectionStatus =~ \"Connected\"), totalConnections = countif(isnotempty(connectionId)) by \n    subscriptionId, resourceGroup, location, GatewayType, SKU, Tier, Resource, vpnClientConfiguration\n| where isempty(vpnClientConfiguration) and connected == 0\n| project subscriptionId, resourceGroup, location, GatewayType, SKU, Tier, Resource",
                     "size": 3,
                     "title": "Orphaned Virtual Network Gateways",
                     "noDataMessage": "No orphaned Virtual Network Gateways found.",
@@ -6417,10 +6421,6 @@
                           "label": "Subscription"
                         },
                         {
-                          "columnId": "Resource",
-                          "label": "Resource"
-                        },
-                        {
                           "columnId": "resourceGroup",
                           "label": "Resource Group"
                         },
@@ -6441,12 +6441,8 @@
                           "label": "Tier"
                         },
                         {
-                          "columnId": "tags",
-                          "label": "Tags"
-                        },
-                        {
-                          "columnId": "Details",
-                          "label": "Details"
+                          "columnId": "Resource",
+                          "label": "Resource"
                         }
                       ]
                     }
@@ -7871,7 +7867,7 @@
     }
   ],
   "fallbackResourceIds": [
-    "Azure Monitor"
+    "azure monitor"
   ],
   "$schema": "https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json"
 }
